@@ -11,9 +11,9 @@ void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
 	if (tree == NULL || *func == NULL)
 		return;
 
-	binary_tree_preorder(tree->left);
+	func(tree->n);
 
-	printf("%d\n", tree->n);
+	binary_tree_preorder(tree->left);
 
 	binary_tree_preorder(tree->right);
 }
